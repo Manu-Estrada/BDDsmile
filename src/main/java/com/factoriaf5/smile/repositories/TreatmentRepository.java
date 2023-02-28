@@ -1,5 +1,9 @@
 package com.factoriaf5.smile.repositories;
 
-public class TreatmentRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
 
+import com.factoriaf5.smile.models.Treatment;
+
+public interface TreatmentRepository extends JpaRepository<Treatment,Long>{
+    
 }

@@ -6,21 +6,26 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.factoriaf5.smile.models.Treatment;
-import com.factoriaf5.smile.services.TreatmentService;
+import com.factoriaf5.smile.models.City;
+import com.factoriaf5.smile.services.CityService;
 
 @RestController
-@RequestMapping(path = "/api/profiles")
-public class TreatmentController {
-    private TreatmentService service;
+@RequestMapping
+public class CityController{
+    private CityService service;
 
-    public TreatmentController(TreatmentService service){
+    public CityController(CityService service){
         this.service = service;
+        
     }
-    
+   
     @GetMapping(path = "")
-    public List<Treatment>getAll(){
+    public List<City>getAll(){
         return service.getAll();
     }
     
 }
+
+
+    
+

@@ -2,24 +2,25 @@ package com.factoriaf5.smile.controllers;
 
 import java.util.List;
 
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.factoriaf5.smile.models.Patient;
-import com.factoriaf5.smile.services.PatientService;
+import com.factoriaf5.smile.models.Treatment;
+import com.factoriaf5.smile.services.TreatmentService;
 
 @RestController
-@RequestMapping (path = "/api/patients")
-public class PatientController {
-    private PatientService service;
+@RequestMapping (path = "/api/treatment")
+public class TreatmentController {
+    private TreatmentService service;
     
-    public PatientController(PatientService service) {
+    public TreatmentController(TreatmentService service) {
         this.service = service;   
 }
 
 @GetMapping(path = "")
-public List<Patient>getAll(){
+public List<Treatment>getAll(){
     return service.getAll();
     }
 }

@@ -15,4 +15,8 @@ public class PatientService {
     public PatientService (PatientRepository repository) {
         this.repository = repository;
 }
+
+    public List<Patient> getAll() {
+        return null;
+    }
 }

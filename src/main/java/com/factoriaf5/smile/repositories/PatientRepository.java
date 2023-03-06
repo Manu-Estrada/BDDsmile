@@ -11,8 +11,4 @@ public interface PatientRepository extends JpaRepository<Patient,Long>{
 
 public Patient findByDni(String dni);
 
-
-
-
-
 }
